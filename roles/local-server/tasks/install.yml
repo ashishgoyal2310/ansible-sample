@@ -1,0 +1,6 @@
+---
+# installing nginx package
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: absent

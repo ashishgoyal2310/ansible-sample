@@ -1,0 +1,22 @@
+---
+# tasks file for local-server
+
+## remove nginx package
+#- name: Uninstall Nginx
+#  become: yes
+#  apt:
+#    name: nginx
+#    state: absent
+
+# installing nginx package
+- name: Install Nginx
+  become: yes
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+# configuring conf
+- name: Copy conf file
+  become: yes
+  copy: src=nginx.conf dest=/etc/nginx/conf.d/default.conf

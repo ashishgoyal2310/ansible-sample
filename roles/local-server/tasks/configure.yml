@@ -1,0 +1,9 @@
+---
+# configuring conf
+# - name: nginx.conf file
+#   copy: src=nginx.conf dest=/etc/nginx/conf.d/mynginx.conf
+#   notify:
+#     - restart nginx service
+# 
+# - name: send index.html
+#   copy: src=index.html dest=/var/www/html/index.html
